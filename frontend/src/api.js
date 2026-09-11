@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = 'https://online-food-order-zwe3.onrender.com/api';
 
 // Helper to get token
 export const getAuthToken = () => localStorage.getItem('food_order_jwt');
