@@ -42,7 +42,7 @@
 body {
   font-family: var(--font-primary);
   background-color: var(--bg-dark);
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.07) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.06) 0px, transparent 50%),
     radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
@@ -57,13 +57,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #090d16;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--amber-primary);
 }
@@ -122,6 +125,7 @@ body {
   border-radius: 4px;
   padding: 2px;
 }
+
 .badge-veg-dot {
   width: 8px;
   height: 8px;
@@ -139,6 +143,7 @@ body {
   border-radius: 4px;
   padding: 2px;
 }
+
 .badge-nonveg-dot {
   width: 0;
   height: 0;
@@ -149,10 +154,13 @@ body {
 
 /* Animations */
 @keyframes pulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.6;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
@@ -164,6 +172,7 @@ body {
     transform: translateY(-20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -171,8 +180,15 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.97); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes toastSlideIn {
@@ -180,6 +196,7 @@ body {
     transform: translateX(120%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -236,4 +253,93 @@ body {
 
 .food-card:hover .food-card-img-wrap img {
   transform: scale(1.08);
+}
+
+/* ==========================================================================
+   Responsive Media Queries & Utilities
+   ========================================================================== */
+
+/* Mobile & Tablet Utilities */
+@media (max-width: 1024px) {
+  .d-md-flex {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .d-none-mobile {
+    display: none !important;
+  }
+
+  .flex-col-mobile {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .w-100-mobile {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .p-mobile-sm {
+    padding: 12px !important;
+  }
+
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  .justify-center-mobile {
+    justify-content: center !important;
+  }
+
+  .flex-wrap-mobile {
+    flex-wrap: wrap !important;
+  }
+
+  .order-last-mobile {
+    order: 99 !important;
+  }
+
+  .mt-mobile {
+    margin-top: 10px !important;
+  }
+
+  /* Grid Adjustments */
+  .grid-mobile-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Font Adjustments */
+  h1 {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  /* Layout Utilities */
+  .container-fluid {
+    padding: 0 1rem;
+  }
+
+  .glass-nav {
+    padding: 0.5rem 0;
+  }
+
+  .hero-glass-panel {
+    padding: 1.5rem !important;
+    border-radius: 16px !important;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-flex>div {
+    justify-content: center;
+  }
 }

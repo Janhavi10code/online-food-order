@@ -17,8 +17,8 @@ export default function Navbar({
 }) {
   return (
     <header className="glass-nav" style={{ position: 'sticky', top: 0, zIndex: 1000, width: '100%' }}>
-      <div className="container-fluid" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '78px', gap: '1rem' }}>
-        
+      <div className="container-fluid flex-wrap-mobile" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: '78px', gap: '1rem', padding: '10px 1rem' }}>
+
         {/* Brand Logo & Location */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -70,7 +70,7 @@ export default function Navbar({
         </div>
 
         {/* Center Search Bar */}
-        <div style={{ flex: 1, maxWidth: '420px', position: 'relative' }}>
+        <div className="w-100-mobile order-last-mobile" style={{ flex: 1, maxWidth: '420px', minWidth: '260px', position: 'relative' }}>
           <Search
             size={18}
             color="#94a3b8"
@@ -139,7 +139,7 @@ export default function Navbar({
             <span className="badge-veg">
               <span className="badge-veg-dot"></span>
             </span>
-            <span style={{ display: 'inline' }}>Veg Only</span>
+            <span className="d-none-mobile" style={{ display: 'inline' }}>Veg Only</span>
           </button>
 
           {/* Test Msg Button */}
@@ -162,7 +162,7 @@ export default function Navbar({
             title="Show me msg notification preview"
           >
             <BellRing size={16} />
-            <span>Show Msg</span>
+            <span className="d-none-mobile">Show Msg</span>
           </button>
 
           {/* Orders History Button */}
@@ -185,7 +185,7 @@ export default function Navbar({
               title="My Order History & Live Tracker"
             >
               <History size={16} />
-              <span>Orders</span>
+              <span className="d-none-mobile">Orders</span>
             </button>
           )}
 
@@ -204,7 +204,7 @@ export default function Navbar({
             }}
           >
             <ShoppingBag size={18} />
-            <span>Cart</span>
+            <span className="d-none-mobile">Cart</span>
             {cartCount > 0 && (
               <span
                 style={{
@@ -304,7 +304,7 @@ export default function Navbar({
               }}
             >
               <User size={18} color="#f59e0b" />
-              <span>Sign In</span>
+              <span className="d-none-mobile">Sign In</span>
             </button>
           )}
 

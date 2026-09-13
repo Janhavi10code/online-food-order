@@ -12,7 +12,7 @@ export default function HeroBanner({ onSelectCuisine, activeCuisine }) {
   return (
     <div style={{ padding: '2rem 0 1rem' }}>
       <div
-        className="glass-panel"
+        className="glass-panel hero-glass-panel"
         style={{
           position: 'relative',
           padding: '2.5rem',
@@ -37,7 +37,7 @@ export default function HeroBanner({ onSelectCuisine, activeCuisine }) {
           }}
         />
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+        <div className="grid-mobile-stack" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
           
           {/* Left Text */}
           <div>
@@ -158,7 +158,7 @@ export default function HeroBanner({ onSelectCuisine, activeCuisine }) {
             </div>
 
             {/* Feature Pills */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            <div className="grid-mobile-stack" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
               <div
                 style={{
                   background: 'rgba(255, 255, 255, 0.04)',

@@ -34,7 +34,7 @@ export default function FoodDetailModal({
       onClick={onClose}
     >
       <div
-        className="glass-panel animate-fade-in"
+        className="glass-panel animate-fade-in w-100-mobile"
         style={{
           width: '100%',
           maxWidth: '680px',

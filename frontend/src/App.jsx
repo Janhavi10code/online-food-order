@@ -367,7 +367,7 @@ export default function App() {
 
         {/* Featured Restaurants Row */}
         <section style={{ margin: '2rem 0' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+          <div className="flex-col-mobile text-center-mobile" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
             <div>
               <h2 style={{ fontSize: '22px', fontWeight: '800', letterSpacing: '-0.5px' }}>
                 Featured <span className="gradient-text">Specialty Kitchens</span>
@@ -504,7 +504,7 @@ export default function App() {
 
         {/* Dishes Grid */}
         <section>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+          <div className="flex-col-mobile text-center-mobile" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
             <h2 style={{ fontSize: '22px', fontWeight: '800' }}>
               {activeCuisine === 'All' ? 'Popular Dishes' : `${activeCuisine} Specialties`}
               <span style={{ fontSize: '15px', color: '#94a3b8', fontWeight: '500', marginLeft: '8px' }}>
@@ -581,9 +581,9 @@ export default function App() {
           marginTop: 'auto',
         }}
       >
-        <div className="container-fluid" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div className="container-fluid footer-flex" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="flex-col-mobile text-center-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+            <div className="justify-center-mobile" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div
                 style={{
                   width: '36px',
@@ -602,7 +602,7 @@ export default function App() {
               </span>
             </div>
 
-            <div style={{ display: 'flex', gap: '20px', fontSize: '13px', color: '#94a3b8' }}>
+            <div className="justify-center-mobile" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', fontSize: '13px', color: '#94a3b8' }}>
               <span>South Indian</span>
               <span>•</span>
               <span>Maharashtrian</span>
@@ -614,6 +614,7 @@ export default function App() {
           </div>
 
           <div
+            className="flex-col-mobile text-center-mobile"
             style={{
               borderTop: '1px solid rgba(255, 255, 255, 0.05)',
               paddingTop: '1rem',

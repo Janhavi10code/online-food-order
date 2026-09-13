@@ -31,7 +31,7 @@ export default function CartDrawer({
       onClick={onClose}
     >
       <div
-        className="glass-panel animate-toast"
+        className="glass-panel animate-toast w-100-mobile"
         style={{
           width: '100%',
           maxWidth: '440px',
